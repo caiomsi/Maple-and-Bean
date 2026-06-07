@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ============================================================
-       PRIMARY SEO  —  this is an AGENCY DEMO. Replace
-       https://maple-and-bean.example.com with the client's real
-       domain (canonical, OG, schema) once it exists.
+       PRIMARY SEO  —  this is an AGENCY DEMO live at
+       https://maplenbean.caiomsi.com. Swap these URLs for the
+       client's real domain (canonical, OG, schema) once it exists.
        ============================================================ -->
   <title>Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe</title>
   <meta name="description" content="Maple &amp; Bean is a cozy neighborhood coffee shop serving small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries. Stop by for your daily cup.">
-  <link rel="canonical" href="https://maple-and-bean.example.com/">
+  <link rel="canonical" href="https://maplenbean.caiomsi.com/">
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe">
   <meta property="og:description" content="Small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries in a warm, welcoming space.">
-  <meta property="og:url" content="https://maple-and-bean.example.com/">
-  <meta property="og:image" content="https://maple-and-bean.example.com/images/social-share.jpg">
+  <meta property="og:url" content="https://maplenbean.caiomsi.com/">
+  <meta property="og:image" content="https://maplenbean.caiomsi.com/images/social-share.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe">
   <meta name="twitter:description" content="Small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries in a warm, welcoming space.">
-  <meta name="twitter:image" content="https://maple-and-bean.example.com/images/social-share.jpg">
-  <meta name="theme-color" content="#3b2f25">
+  <meta name="twitter:image" content="https://maplenbean.caiomsi.com/images/social-share.jpg">
+  <meta name="theme-color" content="#7a3b22">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -41,8 +41,8 @@
     "name": "Maple & Bean",
     "description": "Cozy neighborhood coffee shop and small-batch roastery serving pour-overs, espresso and fresh-baked pastries.",
     "telephone": "+1-555-019-2278",
-    "url": "https://maple-and-bean.example.com",
-    "image": "https://maple-and-bean.example.com/images/storefront.jpg",
+    "url": "https://maplenbean.caiomsi.com",
+    "image": "https://maplenbean.caiomsi.com/images/storefront.jpg",
     "servesCuisine": ["Coffee", "Espresso", "Pastries", "Breakfast"],
     "priceRange": "$$",
     "address": {
@@ -83,9 +83,9 @@
 
   <!-- Critical above-the-fold CSS, inlined for fast first paint -->
   <style>
-    :root{--color-bg:#faf4ea;--color-ink:#2c2118;--color-accent:#5b7553}
+    :root{--color-bg:#fdf3e4;--color-ink:#3a2a1e;--color-accent:#c75d3c}
     *{margin:0;box-sizing:border-box}
-    body{background:var(--color-bg);color:var(--color-ink);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    body{background:var(--color-bg);color:var(--color-ink);font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
     .hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden}
     .hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:8rem 1.5rem 4rem;width:100%}
   </style>
@@ -129,12 +129,12 @@
     <section class="hero" id="home">
       <div class="hero-media" aria-hidden="true">
         <!-- hero-coffee-pour.jpg: warm photo of a coffee pour / cafe counter (1920×1080) -->
-        <img src="images/hero-coffee-pour.jpg" alt="" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/3b2f25/2c2118?text=+';this.onerror=null">
+        <img class="hero-img" src="images/hero-coffee-pour.jpg" alt="" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/7a3b22/4a3526?text=+';this.onerror=null">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-inner">
         <p class="eyebrow">Neighborhood Roastery &amp; Cafe</p>
-        <h1>Your daily cup,<br>made with care.</h1>
+        <h1>Your daily cup,<br>made with <span class="accent-script">care</span>.</h1>
         <p class="hero-sub">Small-batch beans roasted in-house, slow pour-overs, honest espresso and pastries baked fresh each morning — served in a space that feels like home.</p>
         <div class="hero-actions">
           <a href="#menu" class="btn btn-primary">See the Menu</a>
@@ -148,6 +148,11 @@
           <li>Open 7 days</li>
           <li>Locally owned</li>
         </ul>
+      </div>
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,64 C180,112 360,16 560,40 C760,64 880,128 1080,104 C1240,85 1340,40 1440,56 L1440,120 L0,120 Z" fill="var(--color-bg)"></path>
+        </svg>
       </div>
     </section>
 
@@ -228,9 +233,9 @@
           <figure class="gallery-item fade-in"><img src="images/latte-art.jpg" alt="Latte art poured into a ceramic cup at Maple & Bean" loading="lazy" onerror="this.src='https://placehold.co/600x600/6b5742/faf4ea?text=Latte+Art';this.onerror=null"></figure>
           <figure class="gallery-item fade-in"><img src="images/cafe-interior.jpg" alt="Warm wood-and-plant interior of the Maple & Bean cafe" loading="lazy" onerror="this.src='https://placehold.co/600x600/4a3b2c/faf4ea?text=Interior';this.onerror=null"></figure>
           <figure class="gallery-item fade-in"><img src="images/pastry-case.jpg" alt="Fresh croissants and pastries in the bakery case" loading="lazy" onerror="this.src='https://placehold.co/600x600/8a6d4f/faf4ea?text=Pastries';this.onerror=null"></figure>
-          <figure class="gallery-item fade-in"><img src="images/pour-over.jpg" alt="A hand pour-over coffee being brewed" loading="lazy" onerror="this.src='https://placehold.co/600x600/5b7553/faf4ea?text=Pour-Over';this.onerror=null"></figure>
+          <figure class="gallery-item fade-in"><img src="images/pour-over.jpg" alt="A hand pour-over coffee being brewed" loading="lazy" onerror="this.src='https://placehold.co/600x600/c75d3c/fdf3e4?text=Pour-Over';this.onerror=null"></figure>
           <figure class="gallery-item fade-in"><img src="images/coffee-beans.jpg" alt="Freshly roasted coffee beans" loading="lazy" onerror="this.src='https://placehold.co/600x600/3b2f25/faf4ea?text=Beans';this.onerror=null"></figure>
-          <figure class="gallery-item fade-in"><img src="images/window-seat.jpg" alt="A cozy window seat with a coffee and a book" loading="lazy" onerror="this.src='https://placehold.co/600x600/7a8a6c/faf4ea?text=Window+Seat';this.onerror=null"></figure>
+          <figure class="gallery-item fade-in"><img src="images/window-seat.jpg" alt="A cozy window seat with a coffee and a book" loading="lazy" onerror="this.src='https://placehold.co/600x600/d99a52/fdf3e4?text=Window+Seat';this.onerror=null"></figure>
         </div>
       </div>
     </section>

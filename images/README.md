@@ -1,10 +1,14 @@
 # Images — Maple & Bean
 
-This is an **agency demo site**. Every image currently falls back to a
-`placehold.co` placeholder, so the page looks complete before any real photos
-exist. To make it real for a client, drop photos in this folder using the
+This is an **agency demo site**. It ships with real, warm coffee-shop photos
+sourced from [Unsplash](https://unsplash.com) (free for commercial use, no
+attribution required) so the demo looks finished out of the box. The `<img>` tags
+still keep a `placehold.co` `onerror` fallback as a safety net.
+
+**Before launching for a real client:** replace these stock photos with the
+client's own / properly licensed photography, keeping the same
 **descriptive, hyphenated, lowercase filenames** below (they're an SEO signal and
-the `alt` text already references them) and the placeholders disappear automatically.
+the `alt` text references them). Drop a new file over the old one and you're done.
 
 | Filename (recommended)   | Where it's used              | Recommended size       | What to show |
 |--------------------------|------------------------------|------------------------|--------------|

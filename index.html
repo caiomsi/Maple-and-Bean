@@ -151,7 +151,8 @@
       </div>
       <div class="hero-wave" aria-hidden="true">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,64 C180,112 360,16 560,40 C760,64 880,128 1080,104 C1240,85 1340,40 1440,56 L1440,120 L0,120 Z" fill="var(--color-bg)"></path>
+          <path class="w-back" d="M0,86 C220,44 430,116 650,82 C870,48 1030,14 1250,52 C1340,68 1400,92 1440,86 L1440,120 L0,120 Z"></path>
+          <path class="w-front" d="M0,64 C180,112 360,16 560,40 C760,64 880,128 1080,104 C1240,85 1340,40 1440,56 L1440,120 L0,120 Z"></path>
         </svg>
       </div>
     </section>
@@ -160,44 +161,58 @@
     <section class="section" id="menu">
       <div class="container">
         <div class="section-head fade-in">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M3 8h15v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8z"></path><path d="M6 1v3M10 1v3M14 1v3"></path></svg>
+          </span>
           <p class="eyebrow">The Menu</p>
           <h2>A few of our favorites</h2>
           <p class="section-lead">Seasonal beans and a rotating bakery case. Here's what regulars come back for.</p>
         </div>
 
-        <div class="menu-grid">
-          <article class="menu-card fade-in">
-            <h3>Pour-Over</h3>
-            <p>Single-origin, brewed by hand to order. Bright, clean and ever-changing.</p>
-            <span class="price">$5</span>
-          </article>
-          <article class="menu-card fade-in">
-            <h3>Maple Latte</h3>
-            <p>Our signature — double espresso, steamed milk and a touch of real maple.</p>
-            <span class="price">$5.5</span>
-          </article>
-          <article class="menu-card fade-in">
-            <h3>Classic Espresso</h3>
-            <p>House blend, pulled rich and balanced. Single or double, your call.</p>
-            <span class="price">$3.5</span>
-          </article>
-          <article class="menu-card fade-in">
-            <h3>Cold Brew</h3>
-            <p>Steeped 18 hours for a smooth, low-acid pour over ice.</p>
-            <span class="price">$4.5</span>
-          </article>
-          <article class="menu-card fade-in">
-            <h3>Fresh Pastries</h3>
-            <p>Butter croissants, scones and seasonal galettes — baked here each morning.</p>
-            <span class="price">from $3.5</span>
-          </article>
-          <article class="menu-card fade-in">
-            <h3>Whole Beans</h3>
-            <p>Take the roast home. 12 oz bags of our current single-origins and blends.</p>
-            <span class="price">$16</span>
-          </article>
+        <div class="menu-board fade-in">
+          <div class="menu-col">
+            <h3 class="menu-col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M3 8h15v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8z"></path><path d="M6 1v3M10 1v3M14 1v3"></path></svg>
+              Coffee
+            </h3>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Pour-Over</span><span class="leader" aria-hidden="true"></span><span class="price">$5</span></div>
+              <p>Single-origin, brewed by hand to order. Bright, clean and ever-changing.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Maple Latte</span><span class="leader" aria-hidden="true"></span><span class="price">$5.5</span></div>
+              <p>Our signature — double espresso, steamed milk and a touch of real maple.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Classic Espresso</span><span class="leader" aria-hidden="true"></span><span class="price">$3.5</span></div>
+              <p>House blend, pulled rich and balanced. Single or double, your call.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Cold Brew</span><span class="leader" aria-hidden="true"></span><span class="price">$4.5</span></div>
+              <p>Steeped 18 hours for a smooth, low-acid pour over ice.</p>
+            </div>
+          </div>
+          <div class="menu-col">
+            <h3 class="menu-col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 0 7 3.5 7 8 0 5-3 10-7 10s-7-5-7-10c0-4.5 3-8 7-8z"></path><path d="M12 4c-2.5 3-2.5 13 0 16"></path></svg>
+              Bakery &amp; Beans
+            </h3>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Fresh Pastries</span><span class="leader" aria-hidden="true"></span><span class="price">from $3.5</span></div>
+              <p>Butter croissants, scones and seasonal galettes — baked here each morning.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-top"><span class="menu-item-name">Whole Beans</span><span class="leader" aria-hidden="true"></span><span class="price">$16</span></div>
+              <p>Take the roast home. 12 oz bags of our current single-origins and blends.</p>
+            </div>
+            <p class="menu-note">Full menu &amp; daily specials posted in-store. Oat, almond &amp; soy always available.</p>
+          </div>
         </div>
-        <p class="menu-note fade-in">Full menu &amp; daily specials posted in-store. Oat, almond &amp; soy always available.</p>
+      </div>
+      <div class="section-wave section-wave--sand" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-front" d="M0,80 C240,40 480,40 720,72 C960,104 1200,104 1440,72 L1440,120 L0,120 Z"></path>
+        </svg>
       </div>
     </section>
 
@@ -209,7 +224,7 @@
           <img src="images/our-roastery.jpg" alt="A Maple & Bean barista at work behind the espresso bar" loading="lazy" onerror="this.src='https://placehold.co/700x800/4a3b2c/2c2118?text=+';this.onerror=null">
         </div>
         <div class="story-text fade-in">
-          <p class="eyebrow">Our Story</p>
+          <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>Our Story</p>
           <h2>Coffee worth slowing down for</h2>
           <p>Maple &amp; Bean started with a single drum roaster and a simple idea: great coffee should feel personal. We source beans in small lots, roast them a few pounds at a time, and brew them the way they taste best.</p>
           <p>More than a coffee shop, we're a corner of the neighborhood — the kind of place where the barista knows your order and there's always a seat by the window. Pull up a chair and stay a while.</p>
@@ -220,12 +235,20 @@
           </ul>
         </div>
       </div>
+      <div class="section-wave section-wave--cream" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-front" d="M0,52 C200,100 380,96 580,68 C780,40 920,12 1120,44 C1280,70 1360,96 1440,78 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <!-- ============================ GALLERY ============================ -->
     <section class="section" id="gallery">
       <div class="container">
         <div class="section-head fade-in">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          </span>
           <p class="eyebrow">Gallery</p>
           <h2>A look inside</h2>
         </div>
@@ -238,13 +261,18 @@
           <figure class="gallery-item fade-in"><img src="images/window-seat.jpg" alt="A quiet cup of black coffee in the afternoon light" loading="lazy" onerror="this.src='https://placehold.co/600x600/d99a52/fdf3e4?text=Window+Seat';this.onerror=null"></figure>
         </div>
       </div>
+      <div class="section-wave section-wave--sand" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-front" d="M0,64 C180,112 360,16 560,40 C760,64 880,128 1080,104 C1240,85 1340,40 1440,56 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <!-- ============================ VISIT ============================ -->
     <section class="section section-alt" id="visit">
       <div class="container visit-grid">
         <div class="visit-info fade-in">
-          <p class="eyebrow">Visit Us</p>
+          <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Visit Us</p>
           <h2>Come say hello</h2>
           <p class="visit-address">
             118 Maple Street<br>
@@ -274,12 +302,20 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+      <div class="section-wave section-wave--cream" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-front" d="M0,80 C240,40 480,40 720,72 C960,104 1200,104 1440,72 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <!-- ============================ REVIEWS ============================ -->
     <section class="section" id="reviews">
       <div class="container">
         <div class="section-head fade-in">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h8M8 13h5"></path></svg>
+          </span>
           <p class="eyebrow">Reviews</p>
           <h2>What the neighborhood says</h2>
         </div>
@@ -300,6 +336,33 @@
             <cite>— Priya S.</cite>
           </blockquote>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA BAND ============================ -->
+    <section class="section cta-band" id="cta">
+      <div class="section-wave is-top section-wave--cream" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-back" d="M0,86 C220,44 430,116 650,82 C870,48 1030,14 1250,52 C1340,68 1400,92 1440,86 L1440,120 L0,120 Z"></path>
+          <path class="w-front" d="M0,52 C200,100 380,96 580,68 C780,40 920,12 1120,44 C1280,70 1360,96 1440,78 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+      <div class="container">
+        <span class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M3 8h15v6a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8z"></path><path d="M6 1v3M10 1v3M14 1v3"></path></svg>
+        </span>
+        <p class="eyebrow">See you soon</p>
+        <h2>Come in for a cup</h2>
+        <p>Whether it's your morning ritual or an afternoon escape, there's a fresh pour and a warm seat waiting for you at Maple &amp; Bean.</p>
+        <div class="cta-actions">
+          <a href="#menu" class="btn btn-primary">See the Menu</a>
+          <a href="https://www.google.com/maps?q=118+Maple+Street+Riverton+OR" target="_blank" rel="noopener" class="btn btn-ghost">Get Directions</a>
+        </div>
+      </div>
+      <div class="section-wave section-wave--coffee" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="w-front" d="M0,64 C180,112 360,16 560,40 C760,64 880,128 1080,104 C1240,85 1340,40 1440,56 L1440,120 L0,120 Z"></path>
+        </svg>
       </div>
     </section>
 

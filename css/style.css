@@ -19,7 +19,7 @@
   --color-border:#f0d9bd;
 
   --font-display:'Fraunces', Georgia, serif;
-  --font-body:'Nunito', system-ui, sans-serif;
+  --font-body:'Hanken Grotesk', system-ui, sans-serif;
   --font-script:'Caveat', 'Fraunces', cursive;
 
   --maxw:1180px;
@@ -129,22 +129,25 @@ header{position:sticky;top:0;z-index:50}
 .section-head h2{font-size:clamp(2.1rem,4.6vw,3.1rem)}
 .section-lead{color:var(--color-ink-muted);margin-top:.6rem;font-size:1.12rem}
 
-/* ------------------------------- Menu ------------------------------ */
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
-.menu-card{
+/* ------------------------- Menu (chalk board) ----------------------- */
+.menu-board{
   background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);
-  padding:1.9rem;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);
-  transition:transform .2s ease,box-shadow .2s ease;
+  box-shadow:var(--shadow);padding:clamp(1.6rem,4vw,3rem);position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,5vw,4rem);
 }
-.menu-card::before{content:"";position:absolute;left:0;top:0;height:5px;width:100%;background:var(--warm-gradient);opacity:.9}
-.menu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.menu-card h3{font-size:1.45rem;margin-bottom:.5rem}
-.menu-card p{color:var(--color-ink-muted)}
-.menu-card .price{
-  display:inline-block;margin-top:1.1rem;font-family:var(--font-display);font-weight:600;
-  font-size:1.05rem;color:var(--color-accent-deep);
-  background:rgba(232,168,56,.16);padding:.2rem .8rem;border-radius:999px;
+.menu-board::before{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:var(--warm-gradient)}
+.menu-col-title{
+  display:flex;align-items:center;gap:.55rem;font-size:1.5rem;color:var(--color-accent-deep);
+  margin:0 0 1.3rem;padding-bottom:.6rem;border-bottom:2px solid var(--color-border);
 }
+.menu-col-title svg{width:22px;height:22px;color:var(--color-accent)}
+.menu-item{margin-bottom:1.5rem}
+.menu-item:last-child{margin-bottom:0}
+.menu-item-top{display:flex;align-items:baseline;gap:.6rem}
+.menu-item-name{font-family:var(--font-display);font-weight:600;font-size:1.18rem;color:var(--color-coffee)}
+.leader{flex:1 1 auto;border-bottom:2px dotted var(--color-caramel);position:relative;top:-.3rem;min-width:1.5rem}
+.menu-item .price{font-family:var(--font-display);font-weight:600;font-size:1.1rem;color:var(--color-accent-deep);white-space:nowrap}
+.menu-item p{color:var(--color-ink-muted);margin-top:.25rem;font-size:.97rem;max-width:42ch}
 .menu-note{text-align:center;color:var(--color-ink-muted);margin-top:2.4rem;font-size:1rem}
 
 /* ------------------------------ Story ------------------------------ */
@@ -190,6 +193,29 @@ header{position:sticky;top:0;z-index:50}
 .review p{font-family:var(--font-display);font-style:italic;font-size:1.08rem;color:var(--color-ink);margin-bottom:1rem}
 .review cite{font-style:normal;font-weight:800;color:var(--color-accent-deep)}
 
+/* ------------------------- Section-head icon ------------------------ */
+.section-icon{display:flex;width:54px;height:54px;margin:0 auto .9rem;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(199,93,60,.12);color:var(--color-accent)}
+.section-icon svg{width:26px;height:26px}
+/* inline icon variant for left-aligned eyebrows (story / visit) */
+.eyebrow .ico{width:1.4rem;height:1.4rem;vertical-align:-.25rem;margin-right:.35rem}
+
+/* ----------------------------- CTA band ----------------------------- */
+.cta-band{
+  background:var(--warm-gradient);color:#fff7ec;text-align:center;overflow:hidden;
+  padding-top:clamp(5rem,10vw,8rem);padding-bottom:clamp(5rem,10vw,8rem);
+}
+.cta-band .container{position:relative;z-index:4}
+.cta-band .section-icon{background:rgba(255,255,255,.18);color:#fff7ec}
+.cta-band .eyebrow{color:#ffe9c7}
+.cta-band h2{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin:.2rem 0 .8rem}
+.cta-band p{max-width:46ch;margin:0 auto 2rem;color:#fff1dc;font-size:1.12rem}
+.cta-band .cta-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.cta-band .btn-primary{background:#fff7ec;color:var(--color-accent-deep);box-shadow:0 14px 36px rgba(60,30,12,.28)}
+.cta-band .btn-primary:hover{background:#fff}
+.cta-band .btn-ghost{color:#fff7ec;border-color:#fff7ec}
+.cta-band .btn-ghost:hover{background:#fff7ec;color:var(--color-accent-deep)}
+
 /* ----------------------------- Footer ------------------------------ */
 .footer{background:
   radial-gradient(800px 300px at 80% 0%, rgba(199,93,60,.35), transparent 60%),
@@ -218,19 +244,32 @@ header{position:sticky;top:0;z-index:50}
 .hero-inner > .hero-actions{animation-delay:.72s}
 .hero-inner > .hero-badges{animation-delay:.92s}
 
-/* organic hand-drawn wave dividing hero from the content */
-.hero-wave{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0;pointer-events:none}
-.hero-wave svg{display:block;width:100%;height:clamp(48px,7vw,104px)}
-.hero-wave path{fill:var(--color-bg)}
+/* ------------------- Organic wave section dividers ------------------ */
+/* One reusable wave that sits at a section's edge, filled with the color
+   of the NEXT section so the boundary reads as a soft hand-drawn curve.   */
+.hero-wave,.section-wave{
+  position:absolute;left:0;right:0;bottom:-1px;z-index:3;
+  line-height:0;pointer-events:none;
+}
+.hero-wave svg,.section-wave svg{display:block;width:100%;height:clamp(46px,7vw,104px)}
+/* a top-anchored wave (used by the CTA band) flips to hang from the top */
+.section-wave.is-top{top:-1px;bottom:auto;transform:scaleY(-1)}
+
+/* fill the front (main) wave layer by the next section's base colour */
+.hero-wave .w-front,.section-wave .w-front{fill:var(--color-bg)}  /* default: cream */
+.section-wave--sand   .w-front{fill:var(--color-surface-2)}
+.section-wave--cream  .w-front{fill:var(--color-bg)}
+.section-wave--coffee .w-front{fill:var(--color-coffee)}
+
+/* layered double-wave: a softer honey wave peeking behind the front one */
+.w-back{fill:var(--color-honey);opacity:.5}
 
 /* --------------------------- Scroll reveal -------------------------- */
 .fade-in{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .fade-in.visible{opacity:1;transform:none}
 /* gentle column-by-column cascade inside the grids */
-.menu-grid .fade-in:nth-child(3n+2),
 .gallery-grid .fade-in:nth-child(3n+2),
 .reviews-grid .fade-in:nth-child(3n+2){transition-delay:.09s}
-.menu-grid .fade-in:nth-child(3n),
 .gallery-grid .fade-in:nth-child(3n),
 .reviews-grid .fade-in:nth-child(3n){transition-delay:.18s}
 @media (prefers-reduced-motion:reduce){
@@ -245,6 +284,8 @@ header{position:sticky;top:0;z-index:50}
   .story-grid,.visit-grid{grid-template-columns:1fr}
   .story-media::after{display:none}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .menu-board{grid-template-columns:1fr;gap:1.6rem}
+  .menu-board .menu-col + .menu-col{padding-top:1.6rem;border-top:2px solid var(--color-border)}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:680px){

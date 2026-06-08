@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Maple &amp; Bean">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="mask-icon" href="favicon.svg" color="#c75d3c">
 
   <!-- ============================================================
        PRIMARY SEO  —  this is an AGENCY DEMO live at
-       https://maplenbean.caiomsi.com. Swap these URLs for the
-       client's real domain (canonical, OG, schema) once it exists.
+       https://maplenbean.caiomsi.com. Swap these URLs (and the
+       robots.txt / sitemap.xml hostnames) for the client's real
+       domain — canonical, OG, schema — once it exists.
        ============================================================ -->
   <title>Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe</title>
   <meta name="description" content="Maple &amp; Bean is a cozy neighborhood coffee shop serving small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries. Stop by for your daily cup.">
@@ -18,11 +25,17 @@
   <meta property="og:title" content="Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe">
   <meta property="og:description" content="Small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries in a warm, welcoming space.">
   <meta property="og:url" content="https://maplenbean.caiomsi.com/">
+  <meta property="og:site_name" content="Maple &amp; Bean">
+  <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://maplenbean.caiomsi.com/images/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Maple &amp; Bean — neighborhood coffee roastery &amp; cafe">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Maple &amp; Bean — Neighborhood Coffee Roastery &amp; Cafe">
   <meta name="twitter:description" content="Small-batch roasted coffee, pour-overs, espresso &amp; fresh-baked pastries in a warm, welcoming space.">
   <meta name="twitter:image" content="https://maplenbean.caiomsi.com/images/social-share.jpg">
+  <meta name="twitter:image:alt" content="Maple &amp; Bean — neighborhood coffee roastery &amp; cafe">
   <meta name="theme-color" content="#7a3b22">
 
   <!-- Fonts -->
@@ -38,6 +51,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
+    "@id": "https://maplenbean.caiomsi.com/#business",
     "name": "Maple & Bean",
     "description": "Cozy neighborhood coffee shop and small-batch roastery serving pour-overs, espresso and fresh-baked pastries.",
     "telephone": "+1-555-019-2278",
@@ -45,6 +59,9 @@
     "image": "https://maplenbean.caiomsi.com/images/storefront.jpg",
     "servesCuisine": ["Coffee", "Espresso", "Pastries", "Breakfast"],
     "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
+    "acceptsReservations": "False",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "118 Maple Street",
@@ -58,6 +75,7 @@
       "latitude": 45.5152,
       "longitude": -122.6784
     },
+    "hasMap": "https://www.google.com/maps?q=118+Maple+Street+Riverton+OR",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -75,7 +93,55 @@
     "sameAs": [
       "https://www.instagram.com/mapleandbean",
       "https://www.facebook.com/mapleandbean"
-    ]
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "3"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Dana R."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "The maple latte is unreal and the staff actually remember my name. My favorite morning stop, full stop."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Marcus T."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "You can taste that the beans are roasted here. Best pour-over in town and the pastries sell out for a reason."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Priya S."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Cozy, friendly and never rushed. I get more work done at that window seat than anywhere else."
+      }
+    ],
+    "hasMenu": {
+      "@type": "Menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Coffee",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Pour-Over", "description": "Single-origin, brewed by hand to order. Bright, clean and ever-changing.", "offers": {"@type": "Offer", "price": "5.00", "priceCurrency": "USD"}},
+            {"@type": "MenuItem", "name": "Maple Latte", "description": "Our signature — double espresso, steamed milk and a touch of real maple.", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "USD"}},
+            {"@type": "MenuItem", "name": "Classic Espresso", "description": "House blend, pulled rich and balanced. Single or double, your call.", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "USD"}},
+            {"@type": "MenuItem", "name": "Cold Brew", "description": "Steeped 18 hours for a smooth, low-acid pour over ice.", "offers": {"@type": "Offer", "price": "4.50", "priceCurrency": "USD"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bakery & Beans",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Fresh Pastries", "description": "Butter croissants, scones and seasonal galettes — baked here each morning.", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "USD"}},
+            {"@type": "MenuItem", "name": "Whole Beans", "description": "Take the roast home. 12 oz bags of our current single-origins and blends.", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "USD"}}
+          ]
+        }
+      ]
+    }
   }
   </script>
 
@@ -129,7 +195,7 @@
     <section class="hero" id="home">
       <div class="hero-media" aria-hidden="true">
         <!-- hero-coffee-pour.jpg: warm photo of a coffee pour / cafe counter (1920×1080) -->
-        <img class="hero-img" src="images/hero-coffee-pour.jpg" alt="" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/7a3b22/4a3526?text=+';this.onerror=null">
+        <img class="hero-img" src="images/hero-coffee-pour.jpg" alt="" width="1920" height="1080" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/7a3b22/4a3526?text=+';this.onerror=null">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-inner">
@@ -221,7 +287,7 @@
       <div class="container story-grid">
         <div class="story-media fade-in">
           <!-- our-roastery.jpg: owner at the roaster / behind the bar (700×800 portrait) -->
-          <img src="images/our-roastery.jpg" alt="A Maple & Bean barista at work behind the espresso bar" loading="lazy" onerror="this.src='https://placehold.co/700x800/4a3b2c/2c2118?text=+';this.onerror=null">
+          <img src="images/our-roastery.jpg" alt="A Maple & Bean barista at work behind the espresso bar" width="800" height="1000" loading="lazy" onerror="this.src='https://placehold.co/700x800/4a3b2c/2c2118?text=+';this.onerror=null">
         </div>
         <div class="story-text fade-in">
           <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>Our Story</p>
